@@ -10,6 +10,8 @@ type Review {
   "A number from 1 - 5 with 1 being lowest and 5 being highest"
   rating: Int
 }
+extend schema
+  @link(url: "https://specs.apollo.dev/federation/v2.5", import: ["@key"])
 
 type Mutation {
   submitReview(locationReview: LocationReviewInput): SubmitReviewResponse
