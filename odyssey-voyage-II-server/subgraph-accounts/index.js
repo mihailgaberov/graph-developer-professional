@@ -7,6 +7,7 @@ const axios = require('axios');
 const gql = require('graphql-tag');
 
 const { AuthenticationError } = require('./utils/errors');
+const AccountsAPI = require("./datasources/accounts");
 
 const typeDefs = gql(readFileSync('./schema.graphql', { encoding: 'utf-8' }));
 const resolvers = require('./resolvers');
@@ -44,7 +45,7 @@ async function startApolloServer() {
         return {
           ...userInfo,
           dataSources: {
-            // TODO: add data sources here
+            accountsAPI: new AccountsAPI({ cache }),
           },
         };
       },
