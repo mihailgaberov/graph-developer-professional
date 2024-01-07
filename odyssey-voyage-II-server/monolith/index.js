@@ -14,7 +14,7 @@ const resolvers = require('./resolvers');
 const BookingsDataSource = require('./datasources/bookings');
 const ReviewsDataSource = require('./datasources/reviews');
 const ListingsAPI = require('./datasources/listings');
-const AccountsAPI = require('./datasources/accounts');
+// const AccountsAPI = require('./datasources/accounts');
 const PaymentsAPI = require('./datasources/payments');
 
 async function startApolloServer() {
@@ -52,7 +52,7 @@ async function startApolloServer() {
             bookingsDb: new BookingsDataSource(),
             reviewsDb: new ReviewsDataSource(),
             listingsAPI: new ListingsAPI({ cache }),
-            accountsAPI: new AccountsAPI({ cache }),
+            // accountsAPI: new AccountsAPI({ cache }),
             paymentsAPI: new PaymentsAPI({ cache }),
           },
         };

@@ -3,7 +3,9 @@ extend schema
         import: ["@key"])
         
 type Query {
-  example: String
+  user(id: ID!): User
+  "Currently logged-in user"
+  me: User!
 }
 
 "Represents an Airlock user's common properties"

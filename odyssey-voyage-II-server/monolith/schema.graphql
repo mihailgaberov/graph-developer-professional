@@ -2,11 +2,6 @@ extend schema
   @link(url: "https://specs.apollo.dev/federation/v2.5", import: ["@key"])
 
 type Query {
-  ### User accounts
-  user(id: ID!): User
-  "Currently logged-in user"
-  me: User!
-
   ### Listings
   "A curated array of listings to feature on the homepage"
   featuredListings: [Listing!]!
