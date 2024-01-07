@@ -28,10 +28,6 @@ type Query {
 }
 
 type Mutation {
-  ### Accounts
-  "Updates the logged-in user's profile information"
-  updateProfile(updateProfileInput: UpdateProfileInput): UpdateProfileResponse!
-
   ### Listings
   "Creates a new listing for the currently authenticated host"
   createListing(listing: CreateListingInput!): CreateListingResponse!

@@ -34,3 +34,9 @@ type Guest implements User @key(fields: "id") {
   "The user's profile photo URL"
   profilePicture: String!
 }
+
+type Mutation {
+   ### Accounts
+  "Updates the logged-in user's profile information"
+  updateProfile(updateProfileInput: UpdateProfileInput): UpdateProfileResponse!
+}
